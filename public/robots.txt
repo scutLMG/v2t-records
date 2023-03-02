@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://scutlmg.github.io/v2t-records/sitemap.xml

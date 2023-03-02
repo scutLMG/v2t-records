@@ -1,0 +1,4 @@
+baseURL = 'http://example.org/'
+languageCode = 'zh-CN'
+title = '自动转换文稿记录—热风'
+theme = "PaperMod"

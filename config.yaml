@@ -1,0 +1,222 @@
+baseURL: "https://scutlmg.github.io/v2t-records/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+languageCode: zh-cn
+title: '彷徨热风'
+theme: PaperMod
+
+defaultContentLanguage: 'zh-cn'
+defaultContentLanguageInSubdir: true
+
+enableInlineShortcodes: true #允许内联短码
+enableEmoji: true # 允许使用 Emoji 表情，建议 true
+enableRobotsTXT: true # 允许爬虫抓取到搜索引擎，建议 true
+buildDrafts: true
+buildFuture: true
+buildExpired: false
+hasCJKLanguage: true # 自动检测是否包含 中文日文韩文 如果文章中使用了很多中文引号的话可以开启
+
+paginate: 15    # 首页每页显示的文章数
+summaryLength: 45 # 文章概览的自字数，默认70
+
+pygmentsUseClasses: true
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+ShowLastMod: true #显示文章更新时间
+ShowWordCount: true
+
+ShowToc: true # 显示目录
+TocOpen: true # 自动展开目录
+comments: true
+
+taxonomies: # 分类法
+    category: categories
+    tag: tags
+    series: series
+# languages: # for mutilingual pages
+#     zh-CN:
+#         languageName: "Chinese"
+#         weight: 1
+#         profileMode:
+#           enabled: true
+#           title: 自动转换文稿
+#           # Content: >
+#           #   这是我的自动视频采集，自动视频转文字文稿的发布页
+
+#           #   - 作记录，个人自用非作商用，如侵权，请联系删除。
+
+#           #   - 交流讨论请发邮件到eewu_hao@mail.scut.edu.cn
+
+#           #   - 网页仅自用，不完善之处尚多。其他网友请勿转载、商用，造成侵权行为与本人无关。
+
+#         taxonomies:
+#           category: categories
+#           tag: tags
+#           series: series
+menu:
+    main:
+        - name: 🗏 文稿
+          url: /post/
+          weight: 10
+        - name: ⛱ 时间轴
+          url: /archives/
+          weight: 20
+        - name: ❀ 系列
+          url: /series/
+          weight: 30
+        # - name:  分类
+        #   url: /categories/
+        #   weight: 40
+        - name: ⸙ 标签
+          url: /tags/
+          weight: 50
+        - name: ☘ 关于
+          url: /about/
+          weight: 60
+        - name: ❦ 搜索
+          url: /search/
+          weight: 70
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    description: ""
+    author: 彷徨热风
+    # author: ["Me", "You"] # multiple authors
+
+    defaultTheme: auto
+    # disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: true
+    # disableSpecial1stPost: true
+    ShowAllPagesInArchive: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+
+    images: ["papermod-cover.png"]
+
+    profileMode:
+        enabled: true
+        title: 𓃒
+        subtitle: "🖨️ 视频转文字 &nbsp&nbsp|&nbsp&nbsp 🕊️ 自动视频采集 &nbsp&nbsp|&nbsp&nbsp 🚀 个人自用"
+        imageUrl: "img/hesitation-hot-wind.jpg"
+        imageTitle: hesitation, hot wind (Draw by AI)
+        # imageWidth: 120
+        # imageHeight: 120
+        # buttons:
+        #     - name: Archives
+        #       url: archives
+        #     - name: Tags
+        #       url: tags
+
+    # homeInfoParams:
+    #     Title: "自动转换文稿"
+    #     Content: >
+    #         这是我的自动视频采集，自动视频转文字文稿的发布页
+
+    #         - 仅作记录，个人自用非作商用，如侵权，请联系删除。
+
+    #         - 交流讨论请发邮件到eewu_hao@mail.scut.edu.cn
+
+    #         - 网页仅自用，不完善之处尚多。其他网友请勿转载、商用，造成侵权行为与本人无关。
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/scutLMG/v2t-records"
+        - name: gitee
+          url: "404"
+        - name: QQ
+          url: "404"
+        - name: email
+          url: "mailto:eewu_hao@mail.scut.edu.cn"
+        - name: Rss
+          url: "index.xml"
+
+    # editPost:
+    #     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    #     Text: "Suggest Changes" # edit text
+    #     appendFilePath: true # to append file path to Edit link
+
+    label:
+        text: "彷徨热风"
+        icon: img/hesitation-hot-wind.jpg
+        iconHeight: 30
+
+    # analytics:
+    #     google:
+    #         SiteVerificationTag: ""
+
+    assets:
+        disableHLJS: true
+        # favicon: "<link / abs url>"
+        # favicon16x16: "<link / abs url>"
+        # favicon32x32: "<link / abs url>"
+        # apple_touch_icon: "<link / abs url>"
+        # safari_pinned_tab: "<link / abs url>"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: false # hide on single page
+
+    fuseOpts: # 搜索配置
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        # anchorLineNos: true
+        codeFences: true
+        guessSyntax: true
+        # lineNos: true
+        noClasses: true
+        tabWidth: 4
+        style: monokai
+        # codeFences：代码围栏功能，这个功能一般都要设为 true 的，不然很难看，就是干巴巴的-代码文字，没有颜色。
+        # guessSyntax：猜测语法，这个功能建议设置为 true, 如果你没有设置要显示的语言则会自动匹配。
+        # hl_Lines：高亮的行号，一般这个不设置，因为每个代码块我们可能希望让高亮的地方不一样。
+        # lineNoStart：行号从编号几开始，一般从 1 开始。
+        # lineNos：是否显示行号，我比较喜欢显示，所以我设置的为 true.
+        # lineNumbersInTable：使用表来格式化行号和代码,而不是 标签。这个属性一般设置为 true.
+        # noClasses：使用 class 标签，而不是内嵌的内联样式
+
+# privacy:
+#     vimeo:
+#         disabled: false
+#         simple: true
+
+#     twitter:
+#         disabled: false
+#         enableDNT: true
+#         simple: true
+
+#     instagram:
+#         disabled: false
+#         simple: true
+
+#     youtube:
+#         disabled: false
+#         privacyEnhanced: true
+
+# services:
+#     instagram:
+#         disableInlineCSS: true
+#     twitter:
+#         disableInlineCSS: true
